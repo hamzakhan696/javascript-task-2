@@ -48,7 +48,7 @@ function removeBox(){
    const boxes = parent.querySelectorAll("div");
 
    if (box_Num >= 0 && box_Num < boxes.length) {
-    parent.removeChild(boxes[box_Num]);
+    parent.removeChild(boxes[box_Num - 1        ]);
     showMessage();
 } else {
     alert("Box number does not exist.");
