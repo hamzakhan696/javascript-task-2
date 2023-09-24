@@ -9,8 +9,20 @@
 </head>
 <body>
     <div class="container">
-        <button type="button" onclick="myFunction()" class="btn btn-primary mt-4 mb-4">Primary</button>  
-        <div id="parent"></div>
+        <button type="button" onclick="myFunction()" class="btn btn-primary mt-4 mb-4 ml-3">Add Box</button>  
+        <div class="input-group mb-3 col-4">
+            <input type="text" id="remove" class="form-control" placeholder="Enter number to remove box">
+            <div class="input-group-append">
+                <button type="button" onclick="removeBox()" class="btn btn-danger">Remove</button>
+            </div>
+          </div>    
+          <div id="valid-number" class="alert alert-danger col-4 ml-2" style="display: none;">
+            please enter valid number
+          </div> 
+          <div id="success-message" class="alert alert-success col-4 ml-2" style="display: none;">
+           Box Succesfully deleted
+          </div>
+             <div id="parent"></div>
         
         <script src="script.js"></script>
     </div>

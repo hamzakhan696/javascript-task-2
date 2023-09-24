@@ -36,3 +36,33 @@ function myFunction(){
  
  count++;
 }
+
+function removeBox(){
+   let box_Num = parseInt(document.getElementById("remove").value);
+   if(isNaN(box_Num))
+   {
+    validNumber();
+    return;
+   }
+   const parent = document.getElementById("parent");
+   const boxes = parent.querySelectorAll("div");
+
+   if (box_Num >= 0 && box_Num < boxes.length) {
+    parent.removeChild(boxes[box_Num]);
+    showMessage();
+} else {
+    alert("Box number does not exist.");
+}
+}
+function validNumber(){
+    document.getElementById("valid-number").style.display = 'block'
+    setTimeout(function(){
+        document.getElementById("valid-number").style.display = 'none'
+    }, 3000);
+}
+function showMessage(){
+    document.getElementById("success-message").style.display = 'block'
+    setTimeout(function(){
+        document.getElementById("success-message").style.display = 'none'
+    }, 3000);
+}
