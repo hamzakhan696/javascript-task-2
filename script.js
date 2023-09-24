@@ -9,18 +9,27 @@ function myFunction(){
     // create div element
  const box1 = document.createElement("div");
  
+ 
 //  im using module opeartor for the use of each color 
  const colorIndex = count % colorArr.length;
  const backgroundColor = colorArr[colorIndex];
 
+ 
 //  width height set
  box1.style.width = 700 - (50 * count) + 'px';
  box1.style.height = 700 - (50 * count) + 'px';
 //   color
  box1.style.backgroundColor = backgroundColor;
 
+ 
  document.getElementById("parent").style.position = "relative";
+ 
  box1.style.position = "absolute";
+ box1.style.marginTop ="35%"
+ box1.style.left = "50%";
+ box1.style.transform = "translate(-50%, -50%)";
+
+ 
 
 //  append child element into parent
  document.getElementById("parent").appendChild(box1);
